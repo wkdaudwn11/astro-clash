@@ -7,11 +7,13 @@ import Staking from "./Staking";
 
 import styles from "./PageGameFi.module.sass";
 
+type Tab = "swap" | "staking";
+
 const PageGameFi = () => {
-    const [activeTab, setActiveTab] = useState<"swap" | "staking">("swap");
+    const [activeTab, setActiveTab] = useState<Tab>("swap");
     const router = useRouter();
 
-    const handleTabClick = (nextTab: "swap" | "staking") => () => {
+    const handleTabClick = (nextTab: Tab) => () => {
         if (activeTab === nextTab) return;
 
         setActiveTab(nextTab);

@@ -7,11 +7,14 @@
     right: 0
     z-index: 10
     transition: background .2s, box-shadow .2s
+    background: rgba(44, 44, 44, 0.2)
+    border-bottom: 1px solid #31343F
     .container
         display: flex
         align-items: center
         justify-content: space-between
         height: 88px
+        padding: 20px
         +d
             height: 80px
         +m
@@ -120,13 +123,16 @@
     +base2S
     color: #F4F5F6
     transition: background .2s, color .2s
+    font-weight: 700
+    font-size: 20px
+    line-height: 30px
     &:hover
         color: $n8
         +dark
             color: $n1
     &.active
         // background: $n8
-        color: #A3FF47
+        color: #A3FF47 !important
         +dark
             // background: $n2
             // color: $n8
@@ -143,6 +149,7 @@
     
 
 .button
+    // height: 48px
     margin-left: auto
     background-color: $purple
     font-weight: 650
