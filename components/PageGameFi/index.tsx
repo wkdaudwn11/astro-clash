@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import cn from "classnames";
 
+import Swap from "./Swap";
+import Staking from "./Staking";
+
 import styles from "./PageGameFi.module.sass";
 
 const PageGameFi = () => {
@@ -44,10 +47,7 @@ const PageGameFi = () => {
                         </span>
                     </div>
                 </div>
-                <div className={styles.row}>
-                    <div>left</div>
-                    <div>right</div>
-                </div>
+                {activeTab === "swap" ? <Swap /> : <Staking />}
             </div>
         </div>
     );
