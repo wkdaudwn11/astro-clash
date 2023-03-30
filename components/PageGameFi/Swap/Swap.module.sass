@@ -2,5 +2,43 @@
 
 .row
   display: flex
+  gap: 32px
   +t
       display: block
+
+.left
+  position: relative
+  width: 50%
+  +t
+    width: 100%
+  .img_box
+    width: 100%
+    span
+      position: unset !important
+      border-radius: 20px
+      img
+        position: relative !important
+        height: auto !important
+  .desc_box
+    font-weight: 600
+    font-size: 24px
+    line-height: 36px
+    letter-spacing: -0.02em
+    color: #F2E9E9
+    +s
+      font-size: 20px
+      line-height: 32px
+    &:nth-of-type(1)
+      margin-top: 32px
+      margin-bottom: 48px
+      +s
+        margin-top: 20px
+        margin-bottom: 28px
+
+.right
+  width: 50%
+  +t
+    width: 100%
+    margin-top: 48px
+  +s
+    margin-top: 32px

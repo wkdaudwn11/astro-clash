@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { default as NextImage, ImageProps } from "next/image";
 import cn from "classnames";
+
 import styles from "./Image.module.sass";
 
 const Image = ({ className, ...props }: ImageProps) => {
