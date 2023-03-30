@@ -23,7 +23,8 @@ const NavLink = ({
         <Link href={href}>
             <a
                 className={cn(className, {
-                    [activeClassName]: router.pathname === href,
+                    [activeClassName]:
+                        router.pathname === href || href === "/game-fi",
                 })}
                 onClick={onClick}
             >

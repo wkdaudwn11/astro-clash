@@ -1,20 +1,26 @@
 import { useEffect, useState, useRef } from "react";
+import { useRouter } from "next/router";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 import { useMediaQuery } from "react-responsive";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
 import cn from "classnames";
-import styles from "./Header.module.sass";
+
+import {
+    NavigationList,
+    // settings
+} from "../../constants/navigation";
+// import { notifications } from "../../mocks/notifications";
+
 import Logo from "../Logo";
 import Icon from "../Icon";
 import NavLink from "../NavLink";
-import Link from "next/link";
-import Notification from "./Notification";
+// import Link from "next/link";
+// import Notification from "./Notification";
 import Wallet from "./Wallet";
-import Settings from "./Settings";
+// import Settings from "./Settings";
 import Theme from "../Theme";
 
-import { NavigationList, settings } from "../../constants/navigation";
-import { notifications } from "../../mocks/notifications";
+import styles from "./Header.module.sass";
 
 type HeaderProps = {
     noAuth?: boolean;
@@ -22,11 +28,13 @@ type HeaderProps = {
 
 const Header = ({ noAuth }: HeaderProps) => {
     const [visibleMobileMenu, setVisibleMobileMenu] = useState<boolean>(false);
-    const isTablet = useMediaQuery({ query: "(max-width: 1023px)" });
     const [headerStyle, setHeaderStyle] = useState<boolean>(false);
     const [mounted, setMounted] = useState(false);
 
     const menu = useRef(null);
+
+    const router = useRouter();
+    const isTablet = useMediaQuery({ query: "(max-width: 1023px)" });
 
     useEffect(() => {
         setMounted(true);
@@ -43,6 +51,7 @@ const Header = ({ noAuth }: HeaderProps) => {
 
     return (
         <>
+            <Theme className={styles.theme} />
             {mounted && (
                 <header
                     className={cn(styles.header, {
@@ -51,6 +60,65 @@ const Header = ({ noAuth }: HeaderProps) => {
                     })}
                 >
                     <div className={cn("container-xl", styles.container)}>
+                        <Logo className={styles.logo} />
+
+                        {!isTablet && (
+                            <nav className={styles.pc_menu_container}>
+                                {NavigationList.map((link, index) => (
+                                    <NavLink
+                                        className={styles.link}
+                                        activeClassName={styles.active}
+                                        href={link.url}
+                                        key={index}
+                                    >
+                                        {link.title}
+                                    </NavLink>
+                                ))}
+                            </nav>
+                        )}
+
+                        {!isTablet && (
+                            <button
+                                className={cn("button-stroke", styles.button)}
+                            >
+                                <Icon
+                                    name="game"
+                                    className={styles.icon_game}
+                                />
+                                Connect Wallet
+                            </button>
+                        )}
+
+                        {/** 1024 미만 - 햄버거 메뉴 */}
+                        {isTablet && (
+                            <div
+                                className={cn(styles.menu, {
+                                    [styles.active]: visibleMobileMenu,
+                                })}
+                            >
+                                <button
+                                    className={cn(styles.burger)}
+                                    onClick={() =>
+                                        isTablet &&
+                                        setVisibleMobileMenu(!visibleMobileMenu)
+                                    }
+                                ></button>
+                                <nav className={styles.nav}>
+                                    {NavigationList.map((link, index) => (
+                                        <NavLink
+                                            className={styles.link}
+                                            activeClassName={styles.active}
+                                            href={link.url}
+                                            key={index}
+                                        >
+                                            {link.title}
+                                        </NavLink>
+                                    ))}
+                                </nav>
+                            </div>
+                        )}
+
+                        {/** 1024 미만 - 햄버거 메뉴 클릭시 나타나는 모달? 메뉴 */}
                         {isTablet && (
                             <div
                                 className={cn(styles.mobile_menu, {
@@ -75,35 +143,7 @@ const Header = ({ noAuth }: HeaderProps) => {
                             </div>
                         )}
 
-                        <div
-                            className={cn(styles.menu, {
-                                [styles.active]: visibleMobileMenu,
-                            })}
-                        >
-                            <button
-                                className={cn(styles.burger)}
-                                onClick={() =>
-                                    isTablet &&
-                                    setVisibleMobileMenu(!visibleMobileMenu)
-                                }
-                            ></button>
-                            <nav className={styles.nav}>
-                                {NavigationList.map((link, index) => (
-                                    <NavLink
-                                        className={styles.link}
-                                        activeClassName={styles.active}
-                                        href={link.url}
-                                        key={index}
-                                    >
-                                        {link.title}
-                                    </NavLink>
-                                ))}
-                            </nav>
-                        </div>
-
-                        <Theme className={styles.theme} />
-
-                        {!noAuth ? (
+                        {/* {!noAuth ? (
                             <div className={styles.control}>
                                 <Notification
                                     className={styles.notification}
@@ -132,8 +172,7 @@ const Header = ({ noAuth }: HeaderProps) => {
                                     Play now
                                 </a>
                             </Link>
-                        )}
-                        <Logo className={styles.logo} />
+                        )} */}
                     </div>
                 </header>
             )}

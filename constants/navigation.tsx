@@ -7,22 +7,41 @@ const PlayNow = "/";
 
 const NavigationList: NavigationType[] = [
     {
-        title: "Gameplay",
-        url: "/gameplay",
+        title: "GAME",
+        url: "/game",
     },
     {
-        title: "Roadmap",
-        url: "/roadmap",
+        title: "GAME-fi",
+        url: "/game-fi",
     },
     {
-        title: "Marketplace",
-        url: "/marketplace",
+        title: "Influencer",
+        url: "/influencer",
     },
     {
-        title: "Download & Play",
-        url: "/download-and-play",
+        title: "Guild",
+        url: "/guild",
     },
 ];
+
+// const NavigationList: NavigationType[] = [
+//     {
+//         title: "Gameplay",
+//         url: "/gameplay",
+//     },
+//     {
+//         title: "Roadmap",
+//         url: "/roadmap",
+//     },
+//     {
+//         title: "Marketplace",
+//         url: "/marketplace",
+//     },
+//     {
+//         title: "Download & Play",
+//         url: "/download-and-play",
+//     },
+// ];
 
 const NavigationListFooter: NavigationType[] = [
     {

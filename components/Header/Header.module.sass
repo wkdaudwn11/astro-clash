@@ -10,6 +10,7 @@
     .container
         display: flex
         align-items: center
+        justify-content: space-between
         height: 88px
         +d
             height: 80px
@@ -49,7 +50,7 @@
 
 .menu
     position: relative
-    margin-right: auto
+    margin-left: auto
     font-size: 0
     &.active
         .burger
@@ -113,49 +114,74 @@
         padding: 18px
 
 .link
-    padding: 4px 12px
-    border-radius: 8px
+    padding: 0px 36px
+    // border-radius: 8px
     white-space: nowrap
     +base2S
-    color: $n5
+    color: #F4F5F6
     transition: background .2s, color .2s
     &:hover
         color: $n8
         +dark
             color: $n1
     &.active
-        background: $n8
-        color: $n2
+        // background: $n8
+        color: #A3FF47
         +dark
-            background: $n2
-            color: $n8
-    +nl
-        margin-right: 12px
-        +m
-            margin-right: 0
+            // background: $n2
+            // color: $n8
+    // +nl
+    //     margin-right: 12px
+    //     +m
+    //         margin-right: 0
 
 .logo
-    position: absolute
-    top: 50%
-    left: 50%
-    transform: translate(-50%,-50%)
+    // position: absolute
+    // top: 50%
+    // left: 50%
+    // transform: translate(-50%,-50%)
     transition: visibility .2s, opacity .2s
     +d
         width: 114px
         height: 42px
+    
 
 .button
     margin-left: auto
+    background-color: $purple
+    font-weight: 650
+    font-size: 20px
+    line-height: 28px
     svg.icon_game
         display: none
         margin: 0
-    +t
-        height: 40px
-        width: 40px
-        border-radius: 50%
-        font-size: 0
-        svg.icon_game
-            display: block
+    &:hover
+        border-color: transparent
+        background-color: $purple2 !important
+        color: white !important
+
+.pc_menu_container
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    display: flex
+
+.pc_menu_item
+    color: red
+
+// .button
+//     margin-left: auto
+//     svg.icon_game
+//         display: none
+//         margin: 0
+//     +t
+//         height: 40px
+//         width: 40px
+//         border-radius: 50%
+//         font-size: 0
+//         svg.icon_game
+//             display: block
 
 .control
     display: flex
