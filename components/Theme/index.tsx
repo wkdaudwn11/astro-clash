@@ -10,11 +10,12 @@ type ThemeProps = {
 };
 
 const Theme = ({ className, large }: ThemeProps) => {
-    const darkMode = useDarkMode(false);
+    const darkMode = useDarkMode(true);
 
     return (
         <label
             className={cn(className, styles.theme, { [styles.large]: large })}
+            style={{ display: "none" }}
         >
             <input
                 className={styles.input}

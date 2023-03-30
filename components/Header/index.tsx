@@ -11,6 +11,7 @@ import Link from "next/link";
 import Notification from "./Notification";
 import Wallet from "./Wallet";
 import Settings from "./Settings";
+import Theme from "../Theme";
 
 import { NavigationList, settings } from "../../constants/navigation";
 import { notifications } from "../../mocks/notifications";
@@ -99,6 +100,8 @@ const Header = ({ noAuth }: HeaderProps) => {
                                 ))}
                             </nav>
                         </div>
+
+                        <Theme className={styles.theme} />
 
                         {!noAuth ? (
                             <div className={styles.control}>
