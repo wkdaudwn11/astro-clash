@@ -12,19 +12,20 @@
 .bg
   background-color: #161616
     
-.container
-    padding: 0 20px
-    
 .title_block
     display: flex
     align-items: center
     justify-content: space-between
     max-width: 1400px
-    +t
-      padding: 0 16px 20px 16px
     padding-bottom: 20px
     margin: 0 auto 32px auto
     border-bottom: 1px solid #31343F
+    +w
+      width: calc(100% - 40px)
+    +t
+      width: calc(100% - 32px)
+      padding-bottom: 16px
+    
 
 .title
   font-weight: 900
