@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useMemo } from "react";
 import cn from "classnames";
+import { useMediaQuery } from "react-responsive";
 
 import Image from "../../Image";
 
 import styles from "./Staking.module.sass";
 
 const Staking = () => {
+    const isScreenSizeD = useMediaQuery({ query: "(max-width: 1259px)" });
+
+    const cardIconSize = useMemo(() => {
+        if (isScreenSizeD) return { width: 40, height: 48 };
+        return { width: 54, height: 64.8 };
+    }, [isScreenSizeD]);
+
     return (
         <>
             <div className={styles.row}>
@@ -44,6 +52,41 @@ const Staking = () => {
                             alt=""
                         />
                     </figure>
+                </div>
+            </div>
+            <div className={styles.card_container}>
+                <div className={styles.row}>
+                    <div className={styles.card_list}>
+                        {[1, 2, 3, 4].map((item) => (
+                            <div key={`card-${item}`} className={styles.card}>
+                                <Image
+                                    src="/icons/kingdom-token-no-space.svg"
+                                    width={cardIconSize.width}
+                                    height={cardIconSize.height}
+                                    alt=""
+                                />
+                                <p className={styles.title}>STAKE 90</p>
+                                <p className={styles.desc}>
+                                    Can be exchanged quickly based on the
+                                    liquidity of the pool.
+                                </p>
+                                <p className={styles.purple_number}>+3.99%</p>
+                                <p className={styles.gray_text}>
+                                    Recruitment Rate
+                                </p>
+                                <p className={styles.white_text}>100%</p>
+                                <p
+                                    className={cn(
+                                        styles.gray_text,
+                                        styles.gray_text2
+                                    )}
+                                >
+                                    Remaining Recruitment Time
+                                </p>
+                                <p className={styles.white_text}>Expired</p>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </>
