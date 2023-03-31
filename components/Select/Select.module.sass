@@ -9,29 +9,38 @@
     align-items: center
     justify-content: space-between
     width: 100%
-    height: 40px
-    padding: 0 14px
-    border: 2px solid $n3
-    border-radius: 8px
+    height: 100%
+    border: 2px solid $darkPurple
+    border-radius: 10px
     +base2
     transition: border-color .2s
+    background-color: $darkPurple
+    color: $n1
+    font-weight: 700
+    font-size: 20px
+    line-height: 32px
     &:hover
-        border-color: $shade1
+        border-color: $purple2
     &.active
         border-color: rgba($purple,.75)
         svg
             transform: scale(1, -1)
     svg
-        margin-left: 16px
+        margin-right: 8px
+    +a
+        font-size: 16px
+    +s
+        font-size: 12px
+        
 
 .dropdown
     position: absolute
-    top: calc(100% + 6px)
+    top: calc(100% + 10px)
     left: 0
     width: 100%
     padding: 8px
-    background: $n0
     border-radius: 12px
+    background-color: $darkPurple
 
 .option
     width: 100%

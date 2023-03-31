@@ -25,9 +25,12 @@
     line-height: 36px
     letter-spacing: -0.02em
     color: #F2E9E9
-    +s
+    +a
       font-size: 20px
       line-height: 32px
+    +s
+      font-size: 16px
+      line-height: 28px
     &:nth-of-type(1)
       margin-top: 32px
       margin-bottom: 48px
@@ -42,3 +45,83 @@
     margin-top: 48px
   +s
     margin-top: 32px
+
+.right_box
+  width: 100%
+  height: auto
+  padding: 20px 32px
+  border: 1px solid $purple
+  border-radius: 20px
+  +a
+    padding: 20px 24px
+  +s
+    padding: 16px
+  & + &
+    position: relative
+    margin-top: 8px
+  .top_text
+    font-weight: 700
+    font-size: 24px
+    line-height: 32px
+    +a
+      font-size: 20px
+      line-height: 28px
+  .input_box
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 100%
+  .bottom_text
+    font-weight: 450
+    font-size: 16px
+    line-height: 24px
+    color: #AEAEAE
+  .arrow_box
+    position: absolute
+    top: -22px
+    left: 50%
+    transform: translateX(-50%)
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 44px
+    height: 44px
+    background-color: $purple
+    +a
+      width: 32px
+      height: 32px
+
+.info_box
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  gap: 6px
+  margin-top: 4px
+  margin-bottom: 28px
+  font-weight: 700
+  font-size: 24px
+  span
+    color: #898989
+  +a
+    font-size: 16px
+  +s
+    font-size: 12px
+
+.input
+  width: 95%
+  font-weight: 450
+  font-size: 36px
+  +a
+    font-size: 24px
+  +s
+    font-size: 20px
+
+.select
+  width: 247px
+  height: 69px
+  +a
+    width: 220px
+    height: 52px
+  +s
+    width: 180px
+    height: 40px

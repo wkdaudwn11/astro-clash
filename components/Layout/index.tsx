@@ -121,9 +121,11 @@ const Layout = ({
                 <meta property="fb:admins" content="132951670226590" />
             </Head>
             <div className={cn(styles.layout, { [styles.gray]: gray })}>
-                {!hideHeader && <Header noAuth={noAuth} />}
+                {/* {!hideHeader && <Header noAuth={noAuth} />} */}
+                <Header noAuth={noAuth} />
                 <div className={styles.inner}>{children}</div>
-                {!hideFooter && <Footer />}
+                <Footer />
+                {/* {!hideFooter && <Footer />} */}
             </div>
         </>
     );

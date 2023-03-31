@@ -127,7 +127,7 @@ const Header = ({ noAuth }: HeaderProps) => {
                                 data-scroll-lock-scrollable
                                 ref={menu}
                             >
-                                {!noAuth && <Wallet wide />}
+                                {/* {!noAuth && <Wallet wide />} */}
                                 <nav className={styles.nav}>
                                     {NavigationList.map((link, index) => (
                                         <NavLink

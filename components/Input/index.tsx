@@ -1,7 +1,7 @@
-import React, { Children } from "react";
+import React from "react";
 import cn from "classnames";
+
 import styles from "./Input.module.sass";
-import { chdir } from "process";
 
 type InputProps = {
     className?: string;
@@ -15,6 +15,7 @@ type InputProps = {
     success?: string;
     arobase?: boolean;
     small?: boolean;
+    readOnly?: boolean;
 };
 
 const Input = ({
@@ -29,6 +30,7 @@ const Input = ({
     success,
     arobase,
     small,
+    readOnly,
 }: InputProps) => {
     return (
         <div className={cn(styles.wrapper)}>
@@ -46,6 +48,7 @@ const Input = ({
                 placeholder={placeholder}
                 required={required}
                 disabled={disabled}
+                readOnly={readOnly}
             />
             {error && (
                 <div className={cn(styles.notice, styles.error)}>{error}</div>

@@ -19,11 +19,11 @@ const Footer = ({ className }: FooterProps) => (
                         </Link>
                     ))}
                 </div>
-                <Link href="/getting-started">
+                {/* <Link href="/getting-started">
                     <a className={cn("button-stroke button-sm", styles.button)}>
                         Play now
                     </a>
-                </Link>
+                </Link> */}
             </div>
             <div className={styles.foot}>
                 <div className={styles.copyright}>© 2022 UI8</div>

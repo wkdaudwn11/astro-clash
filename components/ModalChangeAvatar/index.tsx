@@ -1,12 +1,14 @@
 import { useState } from "react";
 import cn from "classnames";
-import styles from "./ModalChangeAvatar.module.sass";
+import { useMediaQuery } from "react-responsive";
+
 import Modal from "../Modal";
 import Icon from "../Icon";
 import Image from "../Image";
 import PreviewLoader from "../PreviewLoader";
 import InputFile from "../InputFile";
-import { useMediaQuery } from "react-responsive";
+
+import styles from "./ModalChangeAvatar.module.sass";
 
 type ModalChangeAvatarProps = {
     visibleModal: boolean;
