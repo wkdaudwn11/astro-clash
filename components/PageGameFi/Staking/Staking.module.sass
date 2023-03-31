@@ -2,5 +2,49 @@
 
 .row
   display: flex
+  gap: 32px
+  max-width: 1400px
+  margin: 0 auto
   +t
-      display: block
+    display: block
+      padding: 0 16px
+
+
+.left
+  width: 100%
+  padding-right: 54px
+  .text
+    font-weight: 600
+    font-size: 24px
+  .staking_container
+    display: flex
+    align-items: center
+    // justify-content: space-between
+    padding: 4px 0
+    margin-top: 60px
+    background: #1F2128
+    border-radius: 20px
+    div
+      display: flex
+      align-items: center
+      justify-content: center
+    .total_staking_pool
+      width: 70%
+      // border: 1px solid red
+    .total_interest
+      width: 30%
+      // margin-left: auto
+      // padding: 36px 46px
+      border-left: 1px solid #31343F
+
+.right
+  width: 100%
+  max-width: 600px
+  .img_box
+    width: 100%
+    span
+      position: unset !important
+      border-radius: 20px
+      img
+        position: relative !important
+        height: auto !important

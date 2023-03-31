@@ -3,8 +3,11 @@
 .row
   display: flex
   gap: 32px
+  max-width: 1400px
+  margin: 0 auto
   +t
-      display: block
+    display: block
+      padding: 0 16px
 
 .left
   position: relative
@@ -78,7 +81,7 @@
     color: #AEAEAE
   .arrow_box
     position: absolute
-    top: -22px
+    top: -28px
     left: 50%
     transform: translateX(-50%)
     display: flex
@@ -88,6 +91,7 @@
     height: 44px
     background-color: $purple
     +a
+      top: -22px
       width: 32px
       height: 32px
   .minimum_trade_amount_box

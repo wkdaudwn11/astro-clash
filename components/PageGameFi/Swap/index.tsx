@@ -110,7 +110,7 @@ const Swap = () => {
                                 alt=""
                             />
                             <span>99,9999</span>
-                            <span className={styles.dollar}>(99,9999)</span>
+                            <span className={styles.dollar}>($1,767.66)</span>
                         </div>
                     </div>
                     <div className={styles.right_box_row}>
@@ -126,7 +126,9 @@ const Swap = () => {
                                     alt=""
                                 />
                                 <span>99,9999</span>
-                                <span className={styles.dollar}>(99,9999)</span>
+                                <span className={styles.dollar}>
+                                    ($1,767.66)
+                                </span>
                             </div>
                         </p>
                     </div>
@@ -176,7 +178,7 @@ const Swap = () => {
                         </p>
                     </div>
                     <button className={cn("button-stroke", styles.button)}>
-                        Connect Wallet
+                        EXCHANGE
                     </button>
                 </div>
             </div>

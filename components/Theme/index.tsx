@@ -1,8 +1,10 @@
 import React from "react";
 import cn from "classnames";
-import styles from "./Theme.module.sass";
 import useDarkMode from "use-dark-mode";
+
 import Icon from "../Icon";
+
+import styles from "./Theme.module.sass";
 
 type ThemeProps = {
     className?: string;
