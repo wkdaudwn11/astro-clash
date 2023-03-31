@@ -1,9 +1,11 @@
 import { useRouter } from "next/router";
 import cn from "classnames";
-import styles from "./Layout.module.sass";
 import Head from "next/head";
+
 import Header from "../Header";
 import Footer from "../Footer";
+
+import styles from "./Layout.module.sass";
 
 import {
     getDescriptionFromRoute,
@@ -30,6 +32,8 @@ const Layout = ({
     const title = getTitleFromRoute(router.pathname);
     // const description = getDescriptionFromRoute(router.pathname);
     // const image = getMetaImageFromRoute(router.pathname);
+
+    console.log(title);
 
     return (
         <>

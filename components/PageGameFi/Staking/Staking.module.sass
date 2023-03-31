@@ -2,46 +2,118 @@
 
 .row
   display: flex
-  gap: 32px
   max-width: 1400px
   margin: 0 auto
+  padding-bottom: 90px
   +w
-    padding: 0 20px
+    padding: 0 20px 90px 20px
+  +d
+    padding: 0 20px 60px 20px
   +t
+    padding: 0 20px 40px 20px
+  +m
     display: block
-    padding: 0 16px
+    padding: 0 16px 40px 16px
 
 
 .left
+  display: flex
+  flex-direction: column
+  justify-content: center
   width: 100%
   padding-right: 54px
+  +x
+    padding-right: 32px
+  +m
+    padding-right: 0
+    padding-bottom: 32px
+  +s
+    padding-bottom: 24px
   .text
     font-weight: 600
     font-size: 24px
+    +d
+      font-size: 20px
+    +t
+      font-size: 16px
   .staking_container
     display: flex
     align-items: center
-    // justify-content: space-between
-    padding: 4px 0
     margin-top: 60px
     background: #1F2128
     border-radius: 20px
+    +d
+      margin-top: 40px
+    +t
+      margin-top: 20px
     div
       display: flex
       align-items: center
       justify-content: center
     .total_staking_pool
+      gap: 24px
       width: 70%
-      // border: 1px solid red
+      padding: 20px 0
+      .total_staking_pool_left
+        width: 80px
+        height: 80px
+        background-color: #D9D9D9
+        border-radius: 50%
+        +x
+          width: 60px
+          height: 60px
+        +t
+          width: 40px
+          height: 40px
+      .total_staking_pool_right
+        display: block
     .total_interest
+      flex-direction: column
       width: 30%
-      // margin-left: auto
-      // padding: 36px 46px
+      height: 90%
       border-left: 1px solid #31343F
+
+.title
+  margin-bottom: 8px
+  font-weight: 700
+  font-size: 20px
+  +d
+    font-size: 16px
+  +t
+    font-size: 14px
+  +m
+    font-size: 20px
+  +a
+    margin-bottom: 0
+    font-size: 16px
+  +s
+    font-size: 12px
+
+.number
+  font-weight: 900
+  font-size: 32px
+  +x
+    font-size: 28px
+  +d
+    font-size: 20px
+  +t
+    font-size: 16px
+  +m
+    font-size: 32px
+  +a
+    font-size: 20px
+  +s
+    font-size: 16px
+
+.purple
+  color: $purple
 
 .right
   width: 100%
   max-width: 600px
+  +m
+    width: 100%
+    max-width: none
   .img_box
     width: 100%
     span

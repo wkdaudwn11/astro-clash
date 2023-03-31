@@ -7,7 +7,7 @@ import styles from "./Staking.module.sass";
 
 const Staking = () => {
     return (
-        <div style={{ border: "1px solid red" }}>
+        <>
             <div className={styles.row}>
                 <div className={styles.left}>
                     <p className={styles.text}>
@@ -17,9 +17,22 @@ const Staking = () => {
                     </p>
                     <div className={styles.staking_container}>
                         <div className={styles.total_staking_pool}>
-                            staking pool
+                            <div className={styles.total_staking_pool_left} />
+                            <div className={styles.total_staking_pool_right}>
+                                <p className={styles.title}>
+                                    Total Staking Pool
+                                </p>
+                                <p className={styles.number}>
+                                    $999,999,999,999
+                                </p>
+                            </div>
                         </div>
-                        <div className={styles.total_interest}>total inter</div>
+                        <div className={styles.total_interest}>
+                            <p className={styles.title}>Total Interest</p>
+                            <p className={cn(styles.number, styles.purple)}>
+                                +3.99%
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <div className={styles.right}>
@@ -33,7 +46,7 @@ const Staking = () => {
                     </figure>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 
