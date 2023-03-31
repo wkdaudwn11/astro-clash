@@ -81,10 +81,6 @@ const Header = ({ noAuth }: HeaderProps) => {
                             <button
                                 className={cn("button-stroke", styles.button)}
                             >
-                                <Icon
-                                    name="game"
-                                    className={styles.icon_game}
-                                />
                                 Connect Wallet
                             </button>
                         )}

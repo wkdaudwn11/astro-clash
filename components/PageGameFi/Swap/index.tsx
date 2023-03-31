@@ -1,4 +1,5 @@
 import React from "react";
+import cn from "classnames";
 import { useMediaQuery } from "react-responsive";
 
 import Image from "../../Image";
@@ -17,6 +18,7 @@ const options = [
 
 const Swap = () => {
     const isMobile = useMediaQuery({ query: "(max-width: 639px)" });
+    const isSmallMobile = useMediaQuery({ query: "(max-width: 474px)" });
 
     return (
         <div className={styles.row}>
@@ -95,7 +97,88 @@ const Swap = () => {
                     />
                     1 Kingdom Token = 0.0035 ETH <span>($0.641)</span>
                 </div>
-                <div className={styles.right_box}>right_box</div>
+                <div className={styles.right_box}>
+                    <div className={styles.minimum_trade_amount_box}>
+                        <p className={styles.minimum_title}>
+                            MINIMUN TRADE AMONUT
+                        </p>
+                        <div className={styles.fee_box}>
+                            <Image
+                                src="/icons/kingdom-token.svg"
+                                width={isSmallMobile ? 24 : 44}
+                                height={isSmallMobile ? 24 : 44}
+                                alt=""
+                            />
+                            <span>99,9999</span>
+                            <span className={styles.dollar}>(99,9999)</span>
+                        </div>
+                    </div>
+                    <div className={styles.right_box_row}>
+                        <p className={cn(styles.col, styles.col_title)}>
+                            Exchange Fee
+                        </p>
+                        <p className={styles.col}>
+                            <div className={styles.fee_box}>
+                                <Image
+                                    src="/icons/kingdom-token.svg"
+                                    width={isSmallMobile ? 24 : 44}
+                                    height={isSmallMobile ? 24 : 44}
+                                    alt=""
+                                />
+                                <span>99,9999</span>
+                                <span className={styles.dollar}>(99,9999)</span>
+                            </div>
+                        </p>
+                    </div>
+                    <div className={styles.right_box_row}>
+                        <p className={cn(styles.col, styles.col_title)}>
+                            Swap route
+                        </p>
+                        <p className={styles.col}>
+                            <div className={styles.swap_route_left_box}>
+                                <Image
+                                    src="/icons/kingdom-token.svg"
+                                    width={isSmallMobile ? 24 : 44}
+                                    height={isSmallMobile ? 24 : 44}
+                                    alt=""
+                                />
+                                <span>Kingdom Token</span>
+                            </div>
+                            <Image
+                                src="/icons/arrow-right-white.svg"
+                                width={24}
+                                height={24}
+                                alt=""
+                            />
+                            <div className={styles.swap_route_right_box}>
+                                <Image
+                                    src="/icons/kingdom-token.svg"
+                                    width={isSmallMobile ? 24 : 44}
+                                    height={isSmallMobile ? 24 : 44}
+                                    alt=""
+                                />
+                            </div>
+                            <span>Kingdom Token</span>
+                        </p>
+                    </div>
+                    <div className={styles.right_box_row}>
+                        <p className={cn(styles.col, styles.col_title)}>
+                            Current Liquidity Difference (Price Impact)
+                        </p>
+                        <p className={styles.col}>0.01%</p>
+                    </div>
+                    <div className={styles.right_box_row}>
+                        <p className={cn(styles.col, styles.col_title)}>
+                            Slippage Rate
+                        </p>
+                        <p className={cn(styles.col, styles.col_color_text)}>
+                            0.5%
+                        </p>
+                    </div>
+                    <button className={cn("button-stroke", styles.button)}>
+                        Connect Wallet
+                    </button>
+                </div>
             </div>
         </div>
     );
