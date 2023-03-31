@@ -11,10 +11,10 @@ const Logo = ({ className }: LogoProps) => (
     <Link href="/">
         <a className={cn(styles.logo, className)}>
             <Image
-                src="/images/astroclash.png"
-                width="152"
-                height="56"
-                alt="AstroClash"
+                src="/icons/logo.svg"
+                width="182.83"
+                height="44"
+                alt="logo"
             />
         </a>
     </Link>

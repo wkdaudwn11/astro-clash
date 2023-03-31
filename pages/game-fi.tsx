@@ -4,7 +4,7 @@ import PageGameFi from "../components/PageGameFi";
 
 const GameFi: NextPage = () => {
     return (
-        <Layout>
+        <Layout hideFooter>
             <PageGameFi />
         </Layout>
     );
