@@ -6,6 +6,7 @@ import Details from "./Details";
 // import Protect from "./Protect";
 // import Acquaintance from "./Acquaintance";
 import JoinCommunity from "../JoinCommunity";
+import FeaturedGame from "../FeaturedGame";
 
 type PageHomeProps = {};
 
@@ -18,6 +19,7 @@ const PageHome = ({}: PageHomeProps) => {
             {/* <Acquaintance /> */}
             {/* <Offer /> */}
             {/* <Advantages /> */}
+            <FeaturedGame />
             <JoinCommunity />
         </Parallax>
     );

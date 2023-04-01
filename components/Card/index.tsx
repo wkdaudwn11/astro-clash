@@ -1,13 +1,15 @@
 import { useState } from "react";
 import Link from "next/link";
-import styles from "./Card.module.sass";
 import cn from "classnames";
+
+import { numberWithCommas } from "../../utils";
+
 import Image from "../Image";
 import Icon from "../Icon";
 import Favorite from "../Favorite";
 import ModalSale from "../ModalSale";
 
-import { numberWithCommas } from "../../utils";
+import styles from "./Card.module.sass";
 
 type CardProps = {
     className?: string;
@@ -53,8 +55,11 @@ const Card = ({ className, item, bigPreview, saleItem }: CardProps) => {
                     </div>
                 )}
                 <div className={styles.details}>
-                    <Favorite className={styles.favorite} />
-                    <Link href={item.url}>
+                    {/* <Favorite className={styles.favorite} /> */}
+                    <Link
+                        // href={item.url}
+                        href={"/guild"}
+                    >
                         <a
                             className={cn(
                                 "button-stroke",
