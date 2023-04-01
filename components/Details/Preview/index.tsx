@@ -34,7 +34,7 @@ const Preview = ({
                 height={image.height}
                 alt={image.alt}
             />
-            <Back className={styles.back} tooltip="Back" url={url} dark />
+            <Back className={styles.back} tooltip="Go to Main" url={url} dark />
             {share && (
                 <>
                     <button

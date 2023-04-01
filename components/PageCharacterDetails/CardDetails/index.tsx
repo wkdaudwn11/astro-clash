@@ -36,7 +36,8 @@ const CardDetails = ({}: CardDetailsProps) => {
                         className={styles.preview}
                         image={imagePreview}
                         background="#E5DCF3"
-                        url="/marketplace"
+                        // url="/marketplace"
+                        url="/"
                     />
                     <div className={styles.wrap}>
                         <Description
