@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import { useRouter } from "next/router";
-import { useScrollPosition } from "@n8tb1t/use-scroll-position";
+// import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 import { useMediaQuery } from "react-responsive";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
 import cn from "classnames";
@@ -45,9 +45,9 @@ const Header = ({ noAuth }: HeaderProps) => {
         [visibleMobileMenu]
     );
 
-    useScrollPosition(({ currPos }) => {
-        setHeaderStyle(currPos.y <= -2);
-    });
+    // useScrollPosition(({ currPos }) => {
+    //     setHeaderStyle(currPos.y <= -2);
+    // });
 
     return (
         <>

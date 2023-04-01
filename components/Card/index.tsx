@@ -58,7 +58,7 @@ const Card = ({ className, item, bigPreview, saleItem }: CardProps) => {
                     {/* <Favorite className={styles.favorite} /> */}
                     <Link
                         // href={item.url}
-                        href={"/guild"}
+                        href={"/game/banner"}
                     >
                         <a
                             className={cn(

@@ -1,11 +1,13 @@
 import { useState, useRef, useEffect } from "react";
-import styles from "./Parallax.module.sass";
-import cn from "classnames";
-import Image from "../../Image";
-import Mouse from "../../Mouse";
+import Link from "next/link";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import Link from "next/link";
+import cn from "classnames";
+
+import Image from "../../Image";
+import Mouse from "../../Mouse";
+
+import styles from "./Parallax.module.sass";
 
 gsap.registerPlugin(ScrollTrigger);
 

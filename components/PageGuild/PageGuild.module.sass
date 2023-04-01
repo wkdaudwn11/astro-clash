@@ -1,0 +1,125 @@
+@import ../../styles/helpers
+
+.paddingTop
+  padding-top: 88px
+  +d
+      padding-top: 80px
+  +m
+      padding-top: 72px
+
+.section
+  position: relative
+  width: 100%
+  height: 100vh
+  min-height: 600px
+  overflow: hidden
+  span
+    z-index: 1
+  +d
+    height: calc(100vh - 80px)
+  +m
+    height: calc(100vh - 72px)
+
+.container
+  position: absolute
+  z-index: 2
+  width: 100%
+  height: 100%
+  background: rgba(0,0,0,0.2)
+
+.contents
+  position: relative
+  max-width: 1360px
+  margin: 0 auto
+  padding: 95px 0
+  +w
+    padding: 95px 20px
+  +s
+    padding: 32px 16px
+  .title
+    max-width: 749px
+    margin-top: 32px
+    font-weight: 800
+    font-size: 36px
+    line-height: 44px
+    +d
+      font-size: 32px
+      line-height: 40px
+    +m
+      font-size: 28px
+      line-height: 32px
+    +a
+      font-size: 24px
+      line-height: 28px
+    +s
+      margin-top: 16px
+      font-size: 20px
+      line-height: 24px
+  .row
+    display: flex
+    align-items: center
+    margin-top: 44px
+    +s
+      flex-direction: column
+      algin-items: flex-start
+      justify-content: flex-start
+      margin-top: 16px
+  .row_title
+    width: 200px
+    font-weight: 700
+    font-size: 24px
+    +m
+      width: 150px
+    +a
+      width: 120px
+      font-size: 20px
+    +s
+      width: 100%
+      font-size: 24px
+  .store_box
+    width: calc(100% - 200px)
+    +m
+      width: calc(100% - 150px)
+    +a
+      width: calc(100% - 120px)
+    +s
+      width: 100%
+      margin-top: 4px
+    & > span + span
+      margin-left: 16px !important
+  .language
+    width: calc(100% - 200px)
+    max-width: 376px
+    font-weight: 700
+    font-size: 16px
+    line-height: 24px
+    +m
+      width: calc(100% - 150px)
+    +a
+      width: calc(100% - 120px)
+    +s
+      width: 100%
+      max-width: none
+      margin-top: 4px
+      line-height: 20px
+  .coming_soon_box
+    position: absolute
+    bottom: 0
+    right: 0
+    +w
+      right: 20px
+    +s
+      bottom: -32px
+  .button
+    margin-left: auto
+    font-weight: 650
+    font-size: 20px
+    line-height: 28px
+    background-color: #A3FF47
+    color: #1F2128
+    border: none
+    +s
+      height: 48px
+      font-size: 16px
+    &:hover
+        background-color: #8FEE3D !important
