@@ -1,9 +1,11 @@
 import cn from "classnames";
-import styles from "./Details.module.sass";
 import Slider from "react-slick";
+
 import Slide from "./Slide";
 import Icon from "../../Icon";
 import Image from "../../Image";
+
+import styles from "./Details.module.sass";
 
 type PlacesType = {
     location: string;

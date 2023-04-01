@@ -1,0 +1,35 @@
+@import ../../styles/helpers
+
+.section
+  background-color: $n10
+  +d
+      padding-top: 100px
+  +t
+      margin-bottom: 84px
+  +m
+      padding-top: 88px
+      margin-bottom: 64px
+
+.container
+  max-width: 1360px
+  padding-bottom: 20px
+  margin: 0 auto 32px auto
+  overflow: hidden
+  +w
+    width: calc(100% - 40px)
+  +t
+    width: calc(100% - 32px)
+    padding-bottom: 16px
+
+.title
+  font-weight: 900
+  font-size: 48px
+  line-height: 56px
+  letter-spacing: -0.02em
+  text-transform: capitalize
+  +a
+    font-size: 36px
+    line-height: 44px
+  +s
+    font-size: 28px
+    line-height: 36px
