@@ -46,7 +46,20 @@ const GameRanking = () => {
                                         <p className={styles.genre}>MMO</p>
                                     </div>
                                 </Td>
-                                <Td className={styles.col}>999,888,777</Td>
+                                <Td className={styles.col}>
+                                    <div className={styles.people}>
+                                        <figure>
+                                            <Image
+                                                src="/icons/people.svg"
+                                                layout="fixed"
+                                                width={24}
+                                                height={24}
+                                                alt="google-store"
+                                            />
+                                        </figure>
+                                        <span>999,888,777</span>
+                                    </div>
+                                </Td>
                                 <Td className={styles.col}>+99.99%</Td>
                                 <Td className={styles.col}>
                                     <Image
