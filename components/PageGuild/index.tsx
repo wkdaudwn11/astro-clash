@@ -41,15 +41,15 @@ const PageGuild = ({ isShowTitle }: Props) => {
                                 <Image
                                     src="/icons/google-store.svg"
                                     layout="fixed"
-                                    width={isMobile ? 140 : 200}
-                                    height={isMobile ? 42 : 60}
+                                    width={isMobile ? 120 : 200}
+                                    height={isMobile ? 36 : 60}
                                     alt="google-store"
                                 />
                                 <Image
                                     src="/icons/apple-store.svg"
                                     layout="fixed"
-                                    width={isMobile ? 140 : 200}
-                                    height={isMobile ? 42 : 60}
+                                    width={isMobile ? 120 : 200}
+                                    height={isMobile ? 36 : 60}
                                     alt="apple-store"
                                 />
                             </div>

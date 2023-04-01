@@ -1,0 +1,87 @@
+@import ../../styles/helpers
+
+.container
+  max-width: 1360px
+  padding-bottom: 20px
+  margin: 60px auto 32px auto
+  overflow: hidden
+  +w
+    width: calc(100% - 40px)
+  +t
+    width: calc(100% - 32px)
+    padding-bottom: 16px
+
+.title
+  text-transform: uppercase
+  font-weight: 900
+  font-size: 48px
+  line-height: 56px
+  +t
+    font-size: 40px
+    line-height: 48px
+  +s
+    font-size: 32px
+    line-height: 40px
+
+.contents
+  display: flex
+  align-items: center
+  justify-content: space-between
+  gap: 8px
+  +m
+    gap: 20px
+  +a
+    gap: 0
+    flex-direction: column
+
+.left
+  .text
+    font-weight: 650
+    font-size: 18px
+    line-height: 30px
+    +t
+      font-size: 16px
+
+  .text_margin_top
+    margin-top: 32px
+
+.right
+  display: flex
+  justify-content: flex-end
+  width: 40%
+  +d
+    width: 50%
+  +m
+    width: 100%
+    margin-top: 32px
+  .contents
+    display: flex
+    flex-direction: column
+    width: 100%
+    background: linear-gradient(180deg, rgba(67, 67, 73, 0.4) 0%, rgba(67, 67, 73, 0) 100%)
+    border-radius: 20px
+    +m
+      border-radius: 12px
+    .row
+      display: flex
+      align-items: center
+      justify-content: space-between
+      width: calc(100% - 20px)
+      margin: 0 auto
+      padding: 14px 26px
+      border-bottom: 1px solid #7D7D7D
+      +t
+        padding: 14px 0
+      +m
+        padding: 14px
+      p
+        font-weight: 600
+        font-size: 24px
+        line-height: 36px
+        +t
+          font-size: 20px
+          line-height: 32px
+      .value
+        color: $purple
+      &:nth-of-type(5)
+        border: none
