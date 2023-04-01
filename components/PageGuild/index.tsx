@@ -64,9 +64,12 @@ const PageGuild = ({ isShowTitle }: Props) => {
                         </div>
                         <div className={styles.coming_soon_box}>
                             <button
-                                className={cn("button-stroke", styles.button)}
+                                className={cn("button-stroke", styles.button, {
+                                    [styles.button_primary]: isShowTitle,
+                                    [styles.button_purple]: !isShowTitle,
+                                })}
                             >
-                                Coming Soon
+                                {isShowTitle ? "Coming Soon" : "Play NOW"}
                             </button>
                         </div>
                     </div>
