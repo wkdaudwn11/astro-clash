@@ -1,0 +1,47 @@
+@import ../../../styles/helpers
+
+.container
+  margin-top: 20px
+
+.row
+  background: #1F2128
+  border-radius: 10px
+  padding: 20px
+  margin-bottom: 10px
+
+.title
+  padding: 5px 4px
+  font-size: 20px
+  +d
+    font-size: 16px
+  +t
+    font-size: 12px
+
+.col
+  padding: 20px 4px
+  text-align: center
+  vertical-align: middle
+  font-weight: 600
+  font-size: 20px
+  +d
+    font-size: 16px
+  +t
+    font-size: 12px
+
+.spacing
+  height: 10px
+
+.game
+  display: flex
+  justify-content: center
+  align-items: center
+  .game_text_box
+    margin-left: 20px
+    text-align: left
+    +a
+      margin-left: 0
+    .title
+      padding: 0
+    .genre
+      padding: 0
+      color: rgba(255, 255, 255, 0.5)
